@@ -1,2 +1,7 @@
-BOT_TOKEN = "8465340375:AAHVLJaGkYRcXhGcxYctP2QjdD1wW_2qtWA"
-ADMIN_IDS = [482569855]
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # .env faylni yuklaymiz
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+ADMIN_IDS = list(map(int, os.getenv("ADMIN_IDS").split(",")))
